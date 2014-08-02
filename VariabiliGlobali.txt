@@ -1,0 +1,5 @@
+$G_login    ["login"] = false;
+            ["perm"] = 0;
+            ["user"] = "Ospite";
+
+$G_page
