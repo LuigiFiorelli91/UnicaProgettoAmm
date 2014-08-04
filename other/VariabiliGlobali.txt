@@ -3,3 +3,4 @@ $G_login    ["login"] = false;
             ["user"] = "Ospite";
 
 $G_page
+$G_title

@@ -1,0 +1,25 @@
+.menu{
+    
+}
+.menuSx{
+    float: left;
+    margin-left: 10px;
+}
+.menuDx{
+    float: right;
+    margin-right: 10px;
+}
+.menu > a{
+    color: white;
+}
+.searchBar{
+    border-right-width: 0px;
+    border-radius: 7px 0px 0px 7px;
+    width: 300px;
+    height: 40px;
+}
+.searchButton{
+    border-radius: 0px 7px 7px 0px;
+    border-left-width: 0px;
+    height: 40px;
+}

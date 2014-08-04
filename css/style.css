@@ -1,0 +1,115 @@
+/**
+ * Data 02/08/2014
+ * @author Luigi Fiorelli
+*/
+
+body{
+    background-image: url(../img/back1.png);
+    background-repeat: repeat;
+    color: #fff;
+}
+
+#divGen{
+    border-style: solid;
+    border-color: #bd2828;
+    border-width: 3px;
+    
+    border-radius: 7px 7px 7px 7px;
+    background-image: url(../img/back2.png);
+    background-repeat: repeat;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto; 
+    margin-right: auto;
+    min-height: 600px;
+    min-width: 600px;
+    max-width: 1000px;
+}
+#divHeader{
+    border-style: solid;
+    border-color: #bd2828;
+    border-width: 1px;
+    
+    background-color: #241f1f;
+    height: 100px;
+}
+#logo{
+    height: 100px;
+}
+#divMenu{
+    border-style: solid;
+    border-color: #bd2828;
+    border-width: 1px;
+    
+    background-color: #241f1f;
+    padding: 10px;
+    height: 40px;
+}
+#divCont{
+    border-style: solid;
+    border-color: #bd2828;
+    border-width: 1px;
+    
+    background-color: #241f1f;
+    min-height: 400px;
+    overflow: hidden;
+}
+.content{
+    border-style: solid;
+    border-color: #bd2828;
+    border-width: 0px;
+    border-left-width: 1px;
+    border-width: 1px;
+    
+    background-color: #302a2a;
+    padding-top: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    padding-bottom: 20px;
+    height: 100%;
+    margin-left: 240px; 
+    margin-right: 240px;
+}
+.content2ColSx{
+    margin-left: 240px; 
+    margin-right: 0px;
+    margin-right: 10px;
+}
+.content2ColDx{
+    margin-left: 0px; 
+    margin-right: 240px;
+    margin-left: 10px;
+}
+.sidebar{
+    border-style: solid;
+    border-color: #bd2828;
+    border-width: 0px;
+    border-right-width: 1px;
+    border-width: 1px;
+    
+    background-color: #302a2a;
+    padding: 10px;
+    width: 200px;
+    height: 100%;
+}
+.sidebar1 {
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.sidebar2{
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+#divFooter{
+    border-style: solid;
+    border-color: #bd2828;
+    border-width: 1px;
+    
+    background-color: #241f1f;
+    margin: auto;
+    margin-bottom: 0px;
+    height: 50px;
+}
