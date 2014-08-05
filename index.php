@@ -21,6 +21,15 @@
             include_once("base/header.php");
             include_once("page/info.php");
         break;
+        case "product":
+            include_once("class/Prodotto.php");
+            $G_obj_id = $_REQUEST["obj"];
+            $G_obj = new Prodotto();
+            $G_obj->load($G_obj_id);
+            $G_title = $G_obj->getNome();
+            include_once("base/header.php");
+            include_once("page/oggetto.php");
+        break;
         default:
             $G_title = "Errore 404; pagina non trovata";
             include_once("base/header.php");
