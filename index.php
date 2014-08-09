@@ -4,6 +4,7 @@
      */
     include_once("config/config.php");
     include_once("fun/login.php");
+    include_once("class/ListCategorie.php");
     include_once("class/Categoria.php");
     include_once("class/Db.php");
     
@@ -25,16 +26,7 @@
         $G_search_cat = "-1";
     }
     
-    $mysqli = new mysqli();
-    $mysqli->connect(Db::$ip, Db::$user, Db::$password, Db::$database);
-    $query = "select * from categoria";
-    $result = $mysqli->query($query);
-    $c=0;
-    while($row = $result->fetch_array()){
-        $G_categorie[$c] = new Categoria($row["id_c"]);
-        //echo $c." ".$G_categorie[$c]->getNome()."<br>";
-        $c++;
-    }
+    $G_categorie = new ListCategorie();
     
     switch($G_page){
         case "home":

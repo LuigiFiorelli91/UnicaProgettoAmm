@@ -1,5 +1,6 @@
 <?php
-    //include_once("class/Categoria.php");
+    include_once("class/Categoria.php");
+    include_once("class/ListCategorie.php");
 ?>
 
 <html>
@@ -31,9 +32,12 @@
                         <select id="searchCategoria" class="searchCategoria" selected=0>
                             <option value='-1'>All</option>
                             <?php 
-                                $n=count($G_categorie);
+                                $n=$G_categorie->getSize();
+                                $G_categorie->reset();
                                 for($i=0;$i<$n;$i++){
-                                    echo "<option value='".$G_categorie[$i]->getId()."' >".$G_categorie[$i]->getNome()."</option>";
+                                    $cat = $G_categorie->getNextElement();
+                                    echo "<option value='".$cat->getId()."' >".$cat->getNome()."</option>";
+                                    //echo $cat->getId();
                                 }
                             ?>
                         </select>
