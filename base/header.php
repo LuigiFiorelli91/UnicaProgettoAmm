@@ -1,5 +1,5 @@
 <?php
-
+    //include_once("class/Categoria.php");
 ?>
 
 <html>
@@ -8,6 +8,8 @@
         <title><?php echo $G_TITLE." - ".$G_title ?></title>
         <link rel="stylesheet" type="text/css" href="css/style.css" media="screen"> <!-- Css generale -->
         <link rel="stylesheet" type="text/css" href="css/nav.css" media="screen"> <!-- Css del menù -->
+        <script src="js/script.js"></script>
+        <script src="js/jquery-1.11.0.min.js"></script>
     </head>
     <body>
         <div id="divGen"> <!-- Finisce nel footer -->
@@ -26,8 +28,17 @@
                 -->
                 <div class="menu menuSx">
                      <!--<form href="?page=search">-->
-                         <input class="searchBar">
-                         <input type="button" class="searchButton" value="Search">
+                        <select id="searchCategoria" class="searchCategoria" selected=0>
+                            <option value='-1'>All</option>
+                            <?php 
+                                $n=count($G_categorie);
+                                for($i=0;$i<$n;$i++){
+                                    echo "<option value='".$G_categorie[$i]->getId()."' >".$G_categorie[$i]->getNome()."</option>";
+                                }
+                            ?>
+                        </select>
+                     <input type="text" id="searchBar" class="searchBar" name="searchBar" <?php echo 'value="'.$G_search.'"' ?> >
+                        <input type="button" class="searchButton" value="Search" onclick="doSearch()">
                      <!--</form>-->
                 </div>
                 <div class="menu menuSx"><a href="?page=account">Ciao, accedi<br>Account</a></div>

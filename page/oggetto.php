@@ -1,21 +1,14 @@
-<div class="sidebar sidebar1">
-    lolol
-    
-</div>
 <div class="sidebar sidebar2">
     lolol
     
 </div>
-<div class="content">
+<div class="content content2colDx">
+    <?php $img = $G_obj->getImmagini(); ?>
+    <div class="divImage1">
+        <img src="<?php echo $img[0]; ?>" class="img1">
+    </div>
     <p>
-        <h><?php echo $G_obj->getNome(); ?></h> <?php echo $G_obj->getMarca(); ?>
-    </p>
-    <p>
-        <?php $img = $G_obj->getImmagini(); ?>
-        <div class="divImage1">
-            <img src="<?php echo $img[0]; ?>" class="img1">
-        </div>
-        
+    <h1><b><?php echo $G_obj->getNome(); ?></b></h1> <?php echo $G_obj->getMarca(); ?>
     </p>
     <p>
         Marca: <?php echo $G_obj->getMarca(); ?><br>

@@ -4,10 +4,36 @@
      */
     include_once("config/config.php");
     include_once("fun/login.php");
+    include_once("class/Categoria.php");
+    include_once("class/Db.php");
+    
+    
     if(isset($_REQUEST["page"])){
         $G_page = $_REQUEST["page"];
     } else {
         $G_page = "home";
+    }
+    
+    if(isset($_REQUEST["search"])){
+        $G_search = $_REQUEST["search"];
+    } else {
+        $G_search = "";
+    }
+    if(isset($_REQUEST["cat"])){
+        $G_search_cat = $_REQUEST["cat"];
+    } else {
+        $G_search_cat = "-1";
+    }
+    
+    $mysqli = new mysqli();
+    $mysqli->connect(Db::$ip, Db::$user, Db::$password, Db::$database);
+    $query = "select * from categoria";
+    $result = $mysqli->query($query);
+    $c=0;
+    while($row = $result->fetch_array()){
+        $G_categorie[$c] = new Categoria($row["id_c"]);
+        //echo $c." ".$G_categorie[$c]->getNome()."<br>";
+        $c++;
     }
     
     switch($G_page){
@@ -20,6 +46,12 @@
             $G_title = "Info";
             include_once("base/header.php");
             include_once("page/info.php");
+        break;
+        case "search":
+            include_once("class/Search.php");
+            $G_searched = new Search($G_search,$G_search_cat);
+            include_once("base/header.php");
+            include_once("page/search.php");
         break;
         case "product":
             include_once("class/Prodotto.php");
