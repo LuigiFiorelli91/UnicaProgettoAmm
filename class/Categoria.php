@@ -6,6 +6,7 @@
  * @author Luigi
  */
 include_once("class/Db.php");
+include_once("class/SottoCategoria.php");
 class Categoria {
     
     private $nome;
@@ -30,7 +31,15 @@ class Categoria {
         $row = $result->fetch_array();
         $this->nome = $row["nome"];
         
-        $this->loadSubCat();
+        $query = "select * from sottoCategoria where categoria = ".$this->id;
+        $result = $mysqli->query($query);
+        $this->size = 0;
+        $this->n = 0;
+        while($row = $result->fetch_array()){
+            $this->subCat[$this->size] = new SottoCategoria($row[id_s]);
+            $this->size++;
+        }
+        
         
         $mysqli->close();
     }
@@ -43,9 +52,7 @@ class Categoria {
         return $this->id;
     }
     
-    private function loadSubCat(){
-        
-    }
+
     
     /*Gestione sottocategorie*/
     private function reset(){

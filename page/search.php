@@ -4,6 +4,8 @@
 <div class="sidebar sidebar1">
     Filtri:
     
+    
+    
 </div>
 <div class="sidebar sidebar2">
     lolol
