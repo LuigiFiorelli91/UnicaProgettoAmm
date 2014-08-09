@@ -27,6 +27,12 @@
     } else {
         $G_search_cat = "-1";
     }
+    //Categoria selezionata per la ricerca
+    if(isset($_REQUEST["subCat"])){
+        $G_search_subCat = $_REQUEST["subCat"];
+    } else {
+        $G_search_subCat = "-1";
+    }
     
     //Caricamento delle categorie
     $G_categorie = new ListCategorie(); //Caricamento delle categorie

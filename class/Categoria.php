@@ -55,15 +55,15 @@ class Categoria {
 
     
     /*Gestione sottocategorie*/
-    private function reset(){
+    public function reset(){
         $this->n=0;
     }
     
-    private function getSize(){
+    public function getSize(){
         return $this->size;
     }
     
-    private function getNextElement(){
+    public function getNextElement(){
         if($this->n>=$this->size){
             $this->n = 0;
         }

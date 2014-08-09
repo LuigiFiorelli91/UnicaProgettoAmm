@@ -42,7 +42,7 @@
                             ?>
                         </select>
                      <input type="text" id="searchBar" class="searchBar" name="searchBar" <?php echo 'value="'.$G_search.'"' ?> >
-                        <input type="button" class="searchButton" value="Search" onclick="doSearch()">
+                        <input type="button" class="searchButton" value="Search" onclick="doFilterSearch()">
                      <!--</form>-->
                 </div>
                 <div class="menu menuSx"><a href="?page=account">Ciao, accedi<br>Account</a></div>
