@@ -8,25 +8,28 @@
     include_once("class/Categoria.php");
     include_once("class/Db.php");
     
-    
+    //Pagina richiesta
     if(isset($_REQUEST["page"])){
         $G_page = $_REQUEST["page"];
     } else {
         $G_page = "home";
     }
     
+    //Frase da ricercare
     if(isset($_REQUEST["search"])){
         $G_search = $_REQUEST["search"];
     } else {
         $G_search = "";
     }
+    //Categoria selezionata per la ricerca
     if(isset($_REQUEST["cat"])){
         $G_search_cat = $_REQUEST["cat"];
     } else {
         $G_search_cat = "-1";
     }
     
-    $G_categorie = new ListCategorie();
+    //Caricamento delle categorie
+    $G_categorie = new ListCategorie(); //Caricamento delle categorie
     
     switch($G_page){
         case "home":
