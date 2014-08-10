@@ -7,6 +7,13 @@ insert into categoria (nome, descrizione) values ("Casa e cucina", "Roba tecnolo
 
 insert into sottoCategoria (nome, descrizione, categoria) values ("Cellulari", "Dispositivi mobili per chiamare", 
     ( select id_c from categoria where nome = "Eletronica"));
+insert into sottoCategoria (nome, descrizione, categoria) values ("Tablet", "Dispositivi mobili", 
+    ( select id_c from categoria where nome = "Eletronica"));
+insert into sottoCategoria (nome, descrizione, categoria) values ("Televisori", "Televisori ditutti i tipi", 
+    ( select id_c from categoria where nome = "Eletronica"));
+
+insert into sottoCategoria (nome, descrizione, categoria) values ("Fantasy", "Libri fantasy", 
+    ( select id_c from categoria where nome = "Libri"));
 
 insert into marca (nome, descrizione) values ("Samsung", "");
 insert into marca (nome, descrizione) values ("Nokia", "");
@@ -14,6 +21,7 @@ insert into marca (nome, descrizione) values ("Apple", "");
 insert into marca (nome, descrizione) values ("Lg", "");
 insert into marca (nome, descrizione) values ("Motorola", "");
 insert into marca (nome, descrizione) values ("Sony", "");
+insert into marca (nome, descrizione) values ("Salani", "");
 
 /*Galaxy S Advance*/
 insert into oggetto (nome, marca, prezzo, descrizione) values ("Galaxy S Advance", 
@@ -84,3 +92,34 @@ insert into soca_og (id_o, id_s) values (
     (select id_s from sottoCategoria where nome = "Cellulari" limit 1 ));
 insert into immagine (link, id_o) values ("img/obj/samsung/galaxys501.jpg",
     (select id_o from oggetto where nome = "Galaxy S5"));
+
+
+/*Tablet*/
+
+
+/*Tv*/
+/*Samsung T22C300EW TV LCD*/
+insert into oggetto (nome, marca, prezzo, descrizione) values ("TV LCD T22C300EW 22 FullHd", 
+    (select id_m from marca where nome = "Samsung" limit 1),
+    128.42, "");
+insert into soca_og (id_o, id_s) values (
+    (select id_o from oggetto where nome = "TV LCD T22C300EW 22 FullHd" limit 1),
+    (select id_s from sottoCategoria where nome = "Televisori" limit 1 ));
+
+/*Libri*/
+/*HP*/
+/*
+insert into oggetto (nome, marca, prezzo, descrizione) values ("Harry Potter e la pietra filosofale", 
+    (select id_m from marca where nome = "Salani" limit 1),
+    9.99, "");
+insert into soca_og (id_o, id_s) values (
+    (select id_o from oggetto where nome like "Harry Potter e la pietra filosofale" limit 1),
+    (select id_s from sottoCategoria where nome = "Fantasy" limit 1 ));
+
+insert into oggetto (nome, marca, prezzo, descrizione) values ("Harry Potter e la camera dei segreti", 
+    (select id_m from marca where nome = "Salani" limit 1),
+    9.99, "");
+insert into soca_og (id_o, id_s) values (
+    (select id_o from oggetto where nome like "Harry Potter e la camera dei segreti" limit 1),
+    (select id_s from sottoCategoria where nome = "Fantasy" limit 1 ));
+*/
