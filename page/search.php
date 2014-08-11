@@ -36,7 +36,7 @@
     
 </div>
 <div class="sidebar sidebar2">
-    lolol
+    <?php include("page/mostPopular.php"); ?>
     
 </div>
 <div class="content">
