@@ -4,8 +4,10 @@
 */
 
 body{
+    background-color: #000000;
     background-image: url(../img/back1.png);
     background-repeat: repeat;
+    background-attachment: fixed;
     color: #fff;
 }
 a{

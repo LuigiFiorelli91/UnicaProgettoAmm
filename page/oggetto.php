@@ -17,4 +17,8 @@
     <p>
         Descrizione: <?php echo $G_obj->getDescrizione(); ?>
     </p>
+    <p>
+        <input type="text" value="1">
+        <input type="button" value="Aggiungi al carrello">
+    </p>
 </div>

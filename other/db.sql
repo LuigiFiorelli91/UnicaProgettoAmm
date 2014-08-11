@@ -24,6 +24,22 @@ create table SoCa_Og (
     PRIMARY KEY (id_o,id_s)
 );
 
+create table telefono (
+    id_o int NOT NULL,
+    schermo float, /*pollici*/
+    xSchermo int,
+    ySchermo int,
+    peso float, /*grammi*/
+    batteria int, /*mah*/
+    ram int, /*megabyte*/
+    hd int,
+    pro char(100),
+    mhzPro int,
+    core int,
+    so char(100)
+);
+
+
 create table marca (
     id_m int NOT NULL AUTO_INCREMENT,
     nome char(30),
@@ -36,7 +52,9 @@ create table oggetto (
     nome char(30),
     marca int,
     prezzo float,
+    disp int DEFAULT 0,
     descrizione text(1000),
+    vis int DEFAULT 0,
     PRIMARY KEY (id_o)
 );
 

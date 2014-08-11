@@ -13,6 +13,7 @@ class Prodotto {
     private $marca;
     private $prezzo;
     private $descrizione;
+    private $vis;
     private $immagini;
     private $categoria; //da fare
     private $sottoCategoria; //da fare
@@ -32,6 +33,9 @@ class Prodotto {
             $id_marca = $row["marca"];
             $this->prezzo = $row["prezzo"];
             $this->descrizione = $row["descrizione"];
+            $this->vis = $row["vis"];
+            
+            //$this->aggVis();
 
             $query = "select * from marca where id_m = ".$id_marca;
             $result = $this->mysqli->query($query);
@@ -51,6 +55,11 @@ class Prodotto {
             }
         }
         
+    }
+    
+    public function aggVis(){
+        $query = "UPDATE oggetto SET vis=".($this->vis+1)." WHERE id_o=".$this->id;
+        $this->mysqli->query($query);
     }
     
     public function getId(){

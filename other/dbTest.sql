@@ -32,6 +32,9 @@ insert into soca_og (id_o, id_s) values (
     (select id_s from sottoCategoria where nome = "Cellulari" limit 1 ));
 insert into immagine (link, id_o) values ("img/obj/samsung/galaxysadvance01.jpg",
     (select id_o from oggetto where nome = "Galaxy S Advance"));
+insert into telefono (id_o, schermo, xSchermo, ySchermo, peso, batteria, ram, hd, pro, mhzPro, core, so) 
+    values ((select id_o from oggetto where nome = "Galaxy S Advance" limit 1),
+            4, 480, 800, 118, 1550, 756, 8000,"" ,1024, 2, "Android 3.6");
 
 /*Iphone 5*/
 insert into oggetto (nome, marca, prezzo, descrizione) values ("Iphone 5", 
@@ -42,6 +45,9 @@ insert into soca_og (id_o, id_s) values (
     (select id_s from sottoCategoria where nome = "Cellulari" limit 1 ));
 insert into immagine (link, id_o) values ("img/obj/apple/iphone501.jpg",
     (select id_o from oggetto where nome = "Iphone 5"));
+insert into telefono (id_o, schermo, xSchermo, ySchermo, peso, batteria, ram, hd, pro, mhzPro, core, so) 
+    values ((select id_o from oggetto where nome = "Iphone 5" limit 1),
+            null, null, null, null, null, null, null, null, null, null, null);
 
 /*Lg G2*/
 insert into oggetto (nome, marca, prezzo, descrizione) values ("G2", 
@@ -52,6 +58,9 @@ insert into soca_og (id_o, id_s) values (
     (select id_s from sottoCategoria where nome = "Cellulari" limit 1 ));
 insert into immagine (link, id_o) values ("img/obj/lg/g201.jpg",
     (select id_o from oggetto where nome = "G2"));
+insert into telefono (id_o, schermo, xSchermo, ySchermo, peso, batteria, ram, hd, pro, mhzPro, core, so) 
+    values ((select id_o from oggetto where nome = "G2" limit 1),
+            null, null, null, null, null, null, null, null, null, null, null);
 
 /*Motorola Moto G*/
 insert into oggetto (nome, marca, prezzo, descrizione) values ("Moto G", 
@@ -62,6 +71,9 @@ insert into soca_og (id_o, id_s) values (
     (select id_s from sottoCategoria where nome = "Cellulari" limit 1 ));
 insert into immagine (link, id_o) values ("img/obj/motorola/motog01.jpg",
     (select id_o from oggetto where nome = "Moto G"));
+insert into telefono (id_o, schermo, xSchermo, ySchermo, peso, batteria, ram, hd, pro, mhzPro, core, so) 
+    values ((select id_o from oggetto where nome = "Moto G" limit 1),
+            null, null, null, null, null, null, null, null, null, null, null);
 
 /*Motorola Moto X*/
 insert into oggetto (nome, marca, prezzo, descrizione) values ("Moto X", 
@@ -72,6 +84,9 @@ insert into soca_og (id_o, id_s) values (
     (select id_s from sottoCategoria where nome = "Cellulari" limit 1 ));
 insert into immagine (link, id_o) values ("img/obj/motorola/motox01.jpg",
     (select id_o from oggetto where nome = "Moto X"));
+insert into telefono (id_o, schermo, xSchermo, ySchermo, peso, batteria, ram, hd, pro, mhzPro, core, so) 
+    values ((select id_o from oggetto where nome = "Moto X" limit 1),
+            null, null, null, null, null, null, null, null, null, null, null);
 
 /*Samsung Galaxy S3*/
 insert into oggetto (nome, marca, prezzo, descrizione) values ("Galaxy S3", 
@@ -82,6 +97,9 @@ insert into soca_og (id_o, id_s) values (
     (select id_s from sottoCategoria where nome = "Cellulari" limit 1 ));
 insert into immagine (link, id_o) values ("img/obj/samsung/galaxys301.jpg",
     (select id_o from oggetto where nome = "Galaxy S3"));
+insert into telefono (id_o, schermo, xSchermo, ySchermo, peso, batteria, ram, hd, pro, mhzPro, core, so) 
+    values ((select id_o from oggetto where nome = "Galaxy S3" limit 1),
+            null, null, null, null, null, null, null, null, null, null, null);
 
 /*Samsung Galaxy S5*/
 insert into oggetto (nome, marca, prezzo, descrizione) values ("Galaxy S5", 
@@ -92,6 +110,9 @@ insert into soca_og (id_o, id_s) values (
     (select id_s from sottoCategoria where nome = "Cellulari" limit 1 ));
 insert into immagine (link, id_o) values ("img/obj/samsung/galaxys501.jpg",
     (select id_o from oggetto where nome = "Galaxy S5"));
+insert into telefono (id_o, schermo, xSchermo, ySchermo, peso, batteria, ram, hd, pro, mhzPro, core, so) 
+    values ((select id_o from oggetto where nome = "Galaxy S5" limit 1),
+            null, null, null, null, null, null, null, null, null, null, null);
 
 
 /*Tablet*/

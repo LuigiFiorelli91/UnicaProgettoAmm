@@ -1,6 +1,5 @@
 <?php
 /**
- * Description of Search
  *
  * @author Luigi Fiorelli
  */
@@ -44,7 +43,7 @@ class Search {
             if($categoriaV!=-1) { //Aggiunta della condizione per la scelta della categoria
                 $query = $query." and (sottocategoria.categoria = ".$categoriaV." and sottocategoria.id_s = soca_og.id_s and soca_og.id_o = oggetto.id_o)";
             }
-            
+            if($keyV=="all") $query = "select oggetto.id_o from oggetto";
             $result = $this->mysqli->query($query); //Esecuzione della query
             
              /* Caricamento prodotti */

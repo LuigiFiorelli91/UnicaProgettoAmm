@@ -45,9 +45,24 @@
                         <input type="button" class="searchButton" value="Search" onclick="doFilterSearch()">
                      <!--</form>-->
                 </div>
-                <div class="menu menuSx"><a href="?page=account">Ciao, accedi<br>Account</a></div>
-                <div class="menu menuSx"><a href="?page=account">Carrello<br>0 oggetti</a></div>
+                
+                <?php 
+                    if($G_login["login"]){
+                        //echo $G_login["user"];
+                        echo '<div class="menu menuSx"><a href="?page=account">Ciao, '.$G_login["user"].'<br>Il mio account</a></div>';
+                    }else{
+                        //echo "Ospite";
+                        echo '<div class="menu menuSx"><a href="?page=account">Ciao, accedi<br>Il mio account</a></div>';
+                    }
+                ?>
+                
                 <div class="menu menuDx"><a href="?page=info">Info</a></div>
+                <div class="menu menuSx"><a href="?page=carr">Carrello<br>0 oggetti</a></div>
+                <?php
+                    if($G_login["perm"]<=0){
+                        echo '<div class="menu menuDx"><input name="adminCheck" type="checkbox" value="adminCheck" checked="checked"/>Admin</div>';
+                    }
+                ?>
             </div>
             <div id="divCont"> <!-- Finisce nel footer -->
                 
